@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/icon3.png">
+    <title>Portofolio - Muhammad Ilham Rizalul Fath</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="video-background">
+        <source src="src/backgroundDesktop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Konten Utama -->
+    <h1 class="text-center mt-2" style="color: #00FFFF;">Profile</h1>
+    <hr style="color: #00FFFF; text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF; ">
+    <div class="container text-center content">
+        <div class="img">
+          <img src="src/profil.jpg" alt="Profile Picture" class="profile-picture">
+        </div>
+        <h2 id="typewriter"></h2>
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#aboutModal">About Me</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#skillModal">My Skill</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#socialModal">Social Media</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#hobbyModal">Hobbies</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Tambahkan class modal-dialog-centered -->
+        <div class="modal-content">
+            <div class="modal-content text-center" style="border-radius: 10px 10px 0 0;">
+                <h5 class="modal-title" id="aboutModalLabel">About Me</h5>
+            </div>
+            <div class="modal-body">
+                <p class="card-text" style="text-align: justify; font-size: large;">
+                  I am a System Information student at Gunadarma University with a deep passion for programming, web development, and UI/UX design. I am continuously learning and honing my skills in building interactive websites, designing intuitive user interfaces, and exploring machine learning and data analysis. <br>
+                  With a strong enthusiasm for technology, I strive to create innovative digital solutions that enhance user experiences and solve real-world problems. My journey involves mastering technical skills and understanding user behavior to develop efficient and engaging digital products. <br>
+                  I am always open to learning new technologies, collaborating on exciting projects, and expanding my expertise in the ever-evolving tech landscape.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- My Skill Modal -->
+<div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Tambahkan class modal-dialog-centered -->
+        <div class="modal-content">
+            <div class="modal-content text-center" style="border-radius: 10px 10px 0 0;">
+                <h5 class="modal-title" id="skillModalLabel">My Skill</h5>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">HTML 5</h5>
+                        <h5 class="card-title">CSS</h5>
+                        <h5 class="card-title">JavaScript</h5>
+                        <h5 class="card-title">C++</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Social Modal -->
+<div class="modal fade" id="socialModal" tabindex="-1" aria-labelledby="socialModalLabel">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Tambahkan class modal-dialog-centered -->
+        <div class="modal-content">
+            <div class="modal-content text-center" style="border-radius: 10px 10px 0 0;">
+                <h5 class="modal-title" id="socialModalLabel">Social Media</h5>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                  <a href="https://www.instagram.com/rizalulfath/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Instagram</h5>
+                      <p class="card-text">Click here to open the Instagram profile.</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="#" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Linkedin</h5>
+                      <p class="card-text">Coming Soon!</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://github.com/YotaGod" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">GitHub</h5>
+                      <p class="card-text">Click here to open the GitHub profile.</p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hobbies Modal -->
+<div class="modal fade" id="hobbyModal" tabindex="-1" aria-labelledby="hobbyModalLabel">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Tambahkan class modal-dialog-centered -->
+        <div class="modal-content">
+            <div class="modal-content text-center" style="border-radius: 10px 10px 0 0;">
+                <h5 class="modal-title" id="hobbyModalLabel">Hobbies</h5>
+            </div>
+              <div class="modal-body">
+                <div class="card">
+                  <a href="https://s.team/p/fgtg-rgkp/BVDQPBFT" target="_blank">
+                    <i class="fa-brands fa-steam"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Playing Games</h5>
+                      <p class="card-text">I love gaming, feel free to add me on Steam!  </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://letterboxd.com/yotaa/films/reviews/" target="_blank">
+                    <i class="fa-brands fa-letterboxd"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Wacthing Movie</h5>
+                      <p class="card-text">I'm really into movies and TV shows, so click here to see my recommendations and reviews.</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="card">
+                  <a href="https://www.goodreads.com/user/show/175403279-rizal" target="_blank">
+                    <i class="fa-brands fa-goodreads-g"></i>
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Reading Books</h5>
+                      <p class="card-text">Reading books is another passion of mine; click here to view my book list and reviews.</p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('shown.bs.modal', () => {
+        modal.querySelector('.modal-content').style.transform = 'scale(1)';
+    });
+
+    modal.addEventListener('hidden.bs.modal', () => {
+        modal.querySelector('.modal-content').style.transform = 'scale(0.8)';
+      });
+    });
+
+    const typewriterText = "Muhammad Ilham Rizalul Fath";
+const typewriterElement = document.getElementById('typewriter');
+let i = 0;
+
+function typeWriter() {
+    if (i < typewriterText.length) {
+        typewriterElement.innerHTML += typewriterText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Kecepatan ketik (ms)
+    } else {
+        // Hentikan cursor berkedip setelah selesai mengetik
+        typewriterElement.style.borderRight = 'none';
+    }
+}
+
+typeWriter();
+    </script>
+</body>
+</html>

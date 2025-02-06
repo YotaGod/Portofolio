@@ -1,0 +1,41 @@
+@media (max-width: 767px) {
+    body {
+        padding-bottom: 3%;
+        overflow:scroll;
+    }
+
+    .content .img img{
+        width: 50%; 
+        border-radius: 50%;
+    }
+    
+    .btn {
+        margin-left: 10px; /* Margin kiri */
+        margin-right: 10px; /* Margin kanan */
+        font-size: 14px; /* Ukuran font lebih kecil */
+        padding: 30px 12px; /* Padding yang lebih kecil */
+        font-size: 1.2rem;
+    }
+
+    /* Optional: Sesuaikan layout row untuk mobile */
+    .row {
+        margin-left: -20px;
+        margin-right: 0px;
+    }
+
+    .col-md-3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .content .img{
+    padding-top: 0%;
+    }
+
+    .content h2{
+    padding-top: 5%;
+    padding-bottom: 0%;
+    text-shadow: 2px 2px 4px rgba(157, 255, 0, 0.5);
+    font-size: 1.8rem;
+    }
+}

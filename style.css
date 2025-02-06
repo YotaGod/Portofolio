@@ -1,0 +1,319 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Mencegah scroll */
+  background-color: black;
+  padding-bottom: 3%;
+}
+
+/* Video Background */
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan video menutupi seluruh layar */
+  z-index: -5; /* Menempatkan video di belakang konten */
+  opacity: 35%;
+}
+
+/* Konten Utama */
+.content {
+  position: relative;
+  z-index: 1; /* Menempatkan konten di atas video */
+  color: white; /* Warna teks agar terlihat di atas video */
+  padding-top: 20px;
+}
+
+/* Style untuk Modal About Me */
+#aboutModal .modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#aboutModal .modal-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Garis pembatas header */
+    padding: 15px;
+}
+
+#aboutModal .modal-title {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#aboutModal .modal-body {
+    padding: 20px;
+}
+
+#aboutModal .card-text {
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    animation: fadeIn 1s ease-in-out; /* Animasi teks muncul */
+}
+
+/* Animasi fadeIn untuk teks */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style untuk Modal Social Media */
+#socialModal .modal-content {
+    background: linear-gradient(135deg, #00FFFF, #00FF00); /* Gradient background neon biru dan hijau */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#socialModal .modal-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Garis pembatas header */
+    padding: 15px;
+}
+
+#socialModal .modal-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#socialModal .modal-body {
+    padding: 20px;
+}
+
+#socialModal .card {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang card semi-transparan */
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#socialModal .card:hover {
+    transform: translateY(-10px); /* Efek hover: naik ke atas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih besar saat hover */
+    background: rgba(255, 255, 255, 0.2); /* Perubahan warna background saat hover */
+}
+
+#socialModal .card a {
+    text-decoration: none;
+    color: white; /* Warna teks putih */
+    width: 100%;
+    padding: 20px;
+}
+
+#socialModal .card i {
+    font-size: 3rem; /* Ukuran ikon lebih besar */
+    margin-bottom: 10px; /* Jarak antara ikon dan teks */
+}
+
+#socialModal .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white; /* Warna teks putih */
+}
+
+#socialModal .card-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8); /* Warna teks semi-transparan */
+}
+
+.btn {
+  margin: 5px;
+  display: flex; /* Aktifkan Flexbox */
+  align-items: center; /* Vertikal tengah */
+  justify-content: center; /* Horizontal tengah */
+  text-align: center; /* Opsional, untuk teks inline */
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #00ced1, #00fa9a);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 40px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(252, 221, 143, 0.999);
+}
+
+.content .img {
+  padding-top: 2%;
+}
+
+.content .img img:hover {
+  transform: scale(1.1); /* Memperbesar gambar 1.5 kali lipat */
+}
+
+.content .img img {
+  width: 350px;
+  border-radius: 50%;
+  rotate: -10deg;
+  transition: transform 0.3s ease;
+}
+
+.content h2 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 3rem;
+  color: #00FFFF;
+  font-weight: bold;
+}
+
+/* Style untuk Modal My Skill */
+#skillModal .modal-content {
+    background: linear-gradient(135deg, #00FFFF, #00FF00);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#skillModal .modal-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Garis pembatas header */
+    padding: 15px;
+}
+
+#skillModal .modal-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+}
+
+#skillModal .modal-body {
+    padding: 20px;
+}
+
+#skillModal .card {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang card semi-transparan */
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#skillModal .card-body {
+    padding: 20px;
+}
+
+#skillModal .card-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2); /* Latar belakang semi-transparan untuk judul skill */
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#skillModal .card-title:hover {
+    transform: translateX(10px); /* Efek hover: geser ke kanan */
+    background: rgba(0, 0, 0, 0.4); /* Perubahan warna saat hover */
+    cursor:none;
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+}
+
+/* Style untuk Modal Hobby */
+#hobbyModal .modal-content {
+    background: linear-gradient(135deg, #00FFFF, #00FF00); /* Gradient background neon biru dan hijau */
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#hobbyModal .modal-header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Garis pembatas header */
+    padding: 15px;
+}
+
+#hobbyModal .modal-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#hobbyModal .modal-body {
+    padding: 20px;
+}
+
+#hobbyModal .card {
+    background: rgba(255, 255, 255, 0.1); /* Latar belakang card semi-transparan */
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hobbyModal .card:hover {
+    transform: translateY(-10px); /* Efek hover: naik ke atas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow lebih besar saat hover */
+    background: rgba(255, 255, 255, 0.2); /* Perubahan warna background saat hover */
+}
+
+#hobbyModal .card a {
+    text-decoration: none;
+    color: white; /* Warna teks putih */
+    width: 100%;
+    padding: 20px;
+}
+
+#hobbyModal .card i {
+    font-size: 3rem; /* Ukuran ikon lebih besar */
+    margin-bottom: 10px; /* Jarak antara ikon dan teks */
+}
+
+#hobbyModal .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white; /* Warna teks putih */
+}
+
+#hobbyModal .card-text {
+    font-size: 1rem;
+}
+
+.modal-content {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+/* Style untuk cursor berkedip */
+#typewriter::after {
+    content: '|';
+    color: #00FF00;
+    animation: blink 0.4s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
